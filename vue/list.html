@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+    	#app{
+    		width:40%;
+    		margin:100px auto;
+    	}
+    	ul li{
+    		list-style: none;
+    		height:30px;
+    		background:pink;
+    		margin-top:10px;
+    	}
+    	.product-name{
+    		margin-left: 10px;
+    		float:left;
+    	}
+    	.product-price{
+    		float:right; 
+    		margin-right:10px;
+    	}
+         #app .bb{
+         	background:blue;
+         }
+    </style>
+</head>
+<body>
+	<div id="app">
+		<h1>TOLIST</h1>
+		<hr>
+		<label>产品名称：<input type="text" v-model="name" placeholder="请输入产品名称"></label>
+		<label>产品价格：<input type="text" v-model="price "></label>
+		<button @click="add">添加</button>
+		<input type="text" placeholder="名字" v-model="keywords ">
+		<button @click="sea" >查询 </button>
+	<ul>
+		<li v-for="(product,index) in productList" @click="select(product)" :class="{bb:product.isBlue}">
+		<input type="checkbox" class="product-name" @click.stop="" v-model="checked" :value="index">
+		<span class="product-name" @click="del(product,index)">ss</span>
+		<span class="product-name">{{product.name}}</span>
+		<span class="product-price">{{product.price}}</span>
+		</li>
+		</ul>
+		<div id="total" >
+			<button @click="delAll">删除选中</button>
+			总价：{{total}}
+		</div>
+	</div>
+
+	<script src="vue/vue.js"></script>
+ 	<script>
+		new Vue({
+			el:"#app",
+			data:{ 
+				productList:[{
+					name:'衣服',
+					price:'123',
+					isBlue:false
+				},
+				{
+					name:'yiyi',
+					price:'1230',
+					isBlue:false
+				},
+				{
+					name:'bubu',
+					price:'1230',
+					isBlue:false
+				},
+				{
+					name:'gg',
+					price:'12300',
+					isBlue:false
+				},
+
+				],
+				total:0,
+				name:"",
+				price:0 ,
+				checked:[],
+				 keywords:""
+			},
+			methods:{
+				select(product){
+					product.isBlue=!product .isBlue;
+					if(product.isBlue==true)
+					this.total+=parseInt(product.price);
+				    else
+				    this.total-=parseInt(product.price);
+				},
+				add(){
+					  this.productList.push({
+					  	name:this.name,
+					  	price:this.price,
+					  	isBlue:false
+					  });
+					  this.name="";
+					  this.total=0;
+				}
+				,
+				del(product,index){
+					this.productList.splice(index,1);
+				},
+				delAll(){
+					var arr=this.productList.filter((val,idx)=>{
+						if(!this.checked.includes(idx)){
+							return val;
+						}
+						});
+					this.productList=arr;
+					this.checked="";
+                      
+				},
+				sea(){
+					let arr=this.productList.filter((val,key)=>{
+						if(val.name.includes(this.keywords)){
+							return val;
+						}
+					});
+						this.productList=arr;
+				}										
+				}
+		});
+	</script>
+</body>
+</html>
