@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+     <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>认识功道</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+     <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <style>
+    .hm_train{
+    	width:1200px;
+    	height:300px;
+    	background:url(images/hm_bg.png) no-repeat ;
+        background-size:cover;
+        overflow: hidden;
+      
+           }
+    .hm_train h1{
+        width:720px;
+        text-align: center;
+        font-size:26px;
+        color:white;
+        margin:80px 0 0 240px;
+
+    }
+    .hm_train p:nth-child(2){
+        width:60%;
+        text-align: center;
+        font-size:14px;
+        color:white;
+       margin:20px 0 0 240px;
+    }
+    .hm_b:hover{
+        transform: scale(1.2);
+
+    }
+    .hm_bg{
+        width:1200px;
+        height:400px;
+        background:url(images/hm_bg2.png) no-repeat;
+        background-size:cover;
+        overflow: hidden;
+           }
+    .hm_bg h1{
+            font-size:28px;
+            margin:30px 0 20px 0;
+
+           }
+    .hm_wrapper{
+        width:480px;
+        margin: 20px 120px;
+
+    }
+    .hm_wrapper p:nth-child(3){
+         font-size:16px;
+          margin:20px 0 10px 0;
+    }
+    
+    .hm_wrapper p:nth-child(2),.hm_wrapper p:nth-child(4){
+        font-size:15px;
+         margin-bottom: 20px;
+           }
+         .hm_wrapper p:nth-child(2){
+             padding-bottom: 20px;
+             border-bottom:1px solid black;
+    }
+    .hm_wish{ 
+        width:1080px;
+        height:400px;
+       margin:0 auto;
+        overflow: hidden;
+        position:relative;
+    }
+    .hm_wish .hm_biaoti,.hm_value .hm_biaoti{
+        font-size:28px;
+        text-align: center;
+        margin:40px auto;
+    }
+
+    .hm_wish div{
+        width:600px;
+        margin-left:60px;
+    }
+    .hm_wish div img{
+        width:400px;
+    }
+    .hm_wish p:nth-child(4){
+        width:400px;
+        font-size:16px;
+        text-align:right;
+       position: absolute;
+       left:600px;
+       top:250px;
+        color:#25539f;
+        border-bottom:1px solid black;
+      }
+     .hm_wish p:nth-child(5){
+        width:400px;
+        left:600px;
+        font-size:16px;
+        text-align:right;
+         position: absolute;
+          top:270px;
+        color:#25539f;
+  
+    }
+    .hm_size{
+        width:480px;
+        position: absolute;
+        top:60px;
+        right:30px;
+    }
+    .hm_fes{
+        width:600px;
+        height:100px;
+    }
+    .hm_value{
+        width:1200px;
+        height:500px;
+        background:#f8f8f8;
+        position: relative;
+        overflow: hidden;
+    }
+    .hm_value .hm_pic2{
+        z-index:3;
+        position: absolute;
+        width:600px;
+        right:240px;
+
+    }
+    .hm_value .hm_pic2:hover{
+       transform: scale(1.1);
+
+    }
+    .hm_value .hm_pic3{
+        width:240px;
+        position: absolute;
+        top:100px;
+        left:100px;
+    }
+    .hm_fes{
+        width:360px;
+        height:140px;
+        background:#fff;
+        position: absolute;
+        left:60px;
+        bottom:20px;  
+         z-index: 1;      
+    }
+    .hm_fes p:nth-child(1){
+        font-size:20px;
+        margin:10px 10px;
+     
+    }
+    .hm_fes .hm_text{
+        font-size:13px;
+         margin:10px 10px;
+    }
+    .hm_class{
+        width:1200px;
+        height:410px;
+        background: #f8f8f8;
+        overflow: hidden;
+
+    }
+     .hm_title1{
+        font-size:29px;
+        text-align: center;
+        margin:30px 0;
+       position: relative;
+       z-index: 1;
+    }
+
+     .hm_conte{
+        font-size:16px;
+        width:840px;
+        text-align: center;
+        margin:0 auto;
+    }
+    .hm_father{
+        width:1200px;
+        margin:20px 0 20px 90px;
+        display:flex;
+    }
+    .hm_father div{
+         font-size:16px;
+        flex-grow:1;
+        margin-right:60px;
+    }
+     .hm_father div img{
+       margin-left:30px;
+    }
+      .hm_team{
+        width:1080px;
+        margin:0 auto;
+        height:900px;
+        overflow: hidden;
+        position: relative;
+
+    }
+    .hm_img{
+        width:310px;
+        float:left;
+        margin:40px 30px 20px 12px;
+    }
+    .hm_te{
+        font-weight: bolder;
+        font-size:80px;
+        color:#f7faff;
+        opacity: 0.9;
+        position: absolute;
+        left:480px;
+        top:-60px;
+    }
+    .hm_speak{
+        width:1200px;
+        margin:0 auto;
+        height:500px;
+        background: #f8f8f8;
+         position: relative;
+         overflow: hidden;
+    }
+    .hm_speak img{
+       position: absolute;
+       width:400px;
+       left:240px;
+       top:120px;
+    }
+    .hm_lx{
+        margin-right:120px;
+        width:600px;
+        float:right;
+    }
+    .hm_lx p:nth-child(1){
+        font-size:22px;
+    }
+    .hm_lx p{
+        font-size:16px;
+        margin-bottom:10px;
+    }
+    .hm_speak .hm_te{
+        color:#f7faff;
+        font-size:80px;
+        position: absolute;
+        top:40px;
+
+    }
+    .hm_big{
+        width:840px;
+        margin:50px auto;
+        height:400px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+    }
+    .hm_big img{
+        width:72px;
+    }
+    .hm_big img:hover{
+        transform:scale(1.5);
+
+    }
+    .hm_one{
+        position: absolute;
+        top:20px;
+        left:130px;
+
+    }
+    .hm_two{
+        position: absolute;
+        top:100px;
+        left:30px;
+    }
+    .hm_th{
+        position: absolute;
+         top:120px;
+        left:330px;
+    }
+    .hm_fo{
+        position: absolute;
+          top:210px;
+          left:320px;
+    }
+    .hm_fi{
+        position: absolute;
+        top:220px;
+        left:30px;
+    }
+    .hm_six{
+        position: absolute;
+          top:310px;
+        left:130px;
+    }
+    .hm_se{
+        position: absolute;
+            top:20px;
+        left:250px;
+    }
+    .hm_ei{
+        position: absolute;
+            top:310px;
+        left:240px;
+    }
+     .hm_big .hm_nin{
+        position: absolute;
+        top:33px;
+        left:48px;
+        width:336px;
+        z-index: -1;
+
+    }
+    .hm_son{
+        flex-grow:1;
+        width:0;
+    }
+    .hm_son .hm_title1{
+        font-size:26px;
+        margin-left:-310px;
+    }
+    .hm_a{
+        margin-top:50px;
+    }
+    .hm_a p{
+        font-size:15px;
+    }
+    .hm_big .hm_te{
+        font-size:80px;
+        position: absolute;
+        left:400px;
+        top:80px;
+    }
+    .hm_wish .hm_te{
+        position: absolute;
+        left:500px;
+        top:140px;
+    }
+       .swiper-container {
+            width:1200px;
+            height: 400px;
+        }
+          .swiper-wrapper {
+            width: 1080px;
+            height: 400px;
+            margin-left:-72px;
+        }  
+        .swiper-slide{
+            width: 1200px;
+            height: 300px;
+        }
+        .swiper-slide img{
+            width: 240px;
+            margin-top:-100px;
+        }
+    </style>
+
+</head>
+<body>
+	<div class="hm_train">
+		<h1>我们的培训创造优秀的汽车经销商</h1>
+        <p>秉持聚焦战略与工匠精神，功道培训依托基地体验模式、创新型方法、体系化教学、专业级人才打造汽车培训新生态，凝聚跨界力量建立垂直领域立体化优势，致力于为客户保持行业领先提供组织能力保障。</p>
+	</div>
+	<div class="hm_bg">
+        <div class="hm_wrapper">
+        <h1>功道简介</h1>
+        <p>功道培训学院由德国人毕凯吉先生于2013年创建，用以满足中国汽车行业在教育培训方面对内容和标准不断升级的市场需求。学院针对4S店关键岗位提供定制化的培训解决方案，可以根据不同品牌开发专属培训，帮助经销商最大化提升运营效率。同时，我们还提供全日制、在职以及在线远程教育服务，为汽车领域从业人员提供实用岗位培训。
+学院坐落于天津葛沽盛世汽车园内，拥有顶级的培训团队和培训设施，实操车间、试乘试驾专区、培训教室、主题教室、展厅等一应俱全，全方位还原4S店实态工作场景。</p>
+        <p>毕凯吉 KLAUS-JUERGEN BRIX</p>
+        <p>德国职业教育和培训专家，曾任宝马（BMW）培训学院高级培训经理，拥有35年汽车领域教育与培训的丰富经验。</p>
+        </div>
+    </div>
+    <div class="hm_wish">
+       <p class="hm_te">VICTORY</p>
+    	<h2 class="hm_biaoti">功道愿景</h2>
+        <div class="hm_b" >
+            <img src="images/hm_pic.jpg">
+        </div>  
+    	<p>成为中国汽车培训的业中翘楚</p>
+        <p>引领员工成为人生赢家</p>
+    </div>
+    <div class="hm_value">
+        <h2 class="hm_biaoti">功道核心价值观</h2> 
+        <img src="images/hm_pic2.jpg" class="hm_pic2">
+        <img src="images/hm_pic3.jpg" class="hm_pic3">
+        <div class="hm_fes">
+        <p>专业 · 专家</p>
+        <p class="hm_text">只有专注，才能成就专业；只有专业，才能成就专家。功道汽车培训永远坚持“专业•专家”的聚焦理念，定位于汽车类培训业务，追求“做专</p>
+        </div>
+        </div>
+	<div class="hm_big">
+        <div class="hm_son">
+        <img src="images/hm_1.png" class="hm_one">
+        <img src="images/hm_2.png" class="hm_two">
+        <img src="images/hm_3.png" class="hm_th"> 
+        <img src="images/hm_4.png" class="hm_fo">
+        <img src="images/hm_5.png" class="hm_fi">
+        <img src="images/hm_6.png" class="hm_six">
+        <img src="images/hm_7.png" class="hm_se">
+        <img src="images/hm_8.png" class="hm_ei">
+        <img src="images/hm_9.png" class="hm_nin">
+        </div>
+        <div class="hm_son hm_a">
+            <p class="hm_te">PATTERN</p>
+        <h2 class="hm_title1">创新模式</h2>
+        <p >颠覆传统培训、突破行业界限，功道以全新思维引领汽车培训模式变革升级，四大培训模式和四大效果保障直指汽车营销行业痛点，帮助客户建</p>
+        </div>
+	</div>
+	<div class="hm_class">
+        <h2 class="hm_title1">课程体系</h2>
+		<p class="hm_conte">200余人的课程开发团队针对不同需求专业定制培训方案和培训课程，致力打造差异化的服务定位和独有的服务特色</p>
+        <div class="hm_father">
+            <div>
+                <img src="images/hm_tupian2.png">
+                <p>帮助学员转变传统观念、认清经营本质、提升争夺客户能力，解决企业人才短缺、系统运转乏力的问题，让销售人员真正变为企业的发动机</p></div>
+                <div>
+                <img src="images/hm_tupian.png">
+                <p>对日式服务理念进行深度解读与精准剖析，挖掘客户满意度影响要素，增强客户粘性，从而挖掘客户价值，使经销商在市场竞争中占得先机</p></div>
+                <div>
+                <img src="images/hm_tupian3.png">
+                <p>致力于打造经销商优秀的维修服务团队，课程涵盖发动机、变速器、转向系统、制动系统、四轮定位、基础电器、车身电器、影音娱乐等内容</p></div>
+                <div>
+                <img src="images/hm_tupian1.png">
+                <p>倡导方案定制式的强化培训，对当前4S店在人力资源管理、企业战略运营、流程优化管理、业务开拓创新等方面有定制化、系统化的解决方案</p>  </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+		</div>
+    </div>
+        </div>
+        <div class="hm_team">
+            <p class="hm_te">TEAM</p>
+            <h2 class="hm_title1">培训师团队</h2>
+            <p class="hm_conte">功道培训拥有超过350人的讲师团队，成果导向的“赛马机制”和“荣誉机制”激励人才晋升，19位王牌讲师、50余位专家级开发师、100余位专家讲师",200余位专业级讲师保证授课质量。</p>
+            <a href=""></a><img src="images/hm_1.jpg" class="hm_img">
+            <a href=""></a><img src="images/hm_2.jpg" class="hm_img">
+            <a href=""></a><img src="images/hm_3.jpg" class="hm_img">
+            <a href=""></a><img src="images/hm_4.jpg" class="hm_img">
+            <a href=""></a><img src="images/hm_2.jpg" class="hm_img">
+            <a href=""></a><img src="images/hm_4.jpg" class="hm_img">
+        </div>
+        <div class="hm_speak swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            <h2 class="hm_title1">客户评价</h2>
+            <img src="images/hm_5.jpg" >
+            <p class="hm_te">CASE</p>
+            <div class="hm_lx">
+            <p>王剑</p>
+            <p>迪鑫—超达集团董事长</p>
+            <p>我是第一位来到功道的集团董事长，我觉得来得太值了。在这里的每一天我的思维都在颠覆，培训让我看到了更多的市场机会，激发了我很多新的想法，迫不及待地想要回去尝试。遗憾的是考试得了个98，如果是满分，我会带着非常荣耀的成绩毕业于功道，我觉得那是一个自豪的事情。</p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+            <h2 class="hm_title1">客户评价</h2>
+            <img src="images/hm_5.jpg" >
+            <p class="hm_te">CASE</p>
+            <div class="hm_lx">
+            <p>王剑</p>
+            <p>迪鑫—超达集团董事长</p>
+            <p>我是第一位来到功道的集团董事长，我觉得来得太值了。在这里的每一天我的思维都在颠覆，培训让我看到了更多的市场机会，激发了我很多新的想法，迫不及待地想要回去尝试。遗憾的是考试得了个98，如果是满分，我会带着非常荣耀的成绩毕业于功道，我觉得那是一个自豪的事情。</p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+            <h2 class="hm_title1">客户评价</h2>
+            <img src="images/hm_5.jpg" >
+            <p class="hm_te">CASE</p>
+            <div class="hm_lx">
+            <p>王剑</p>
+            <p>迪鑫—超达集团董事长</p>
+            <p>我是第一位来到功道的集团董事长，我觉得来得太值了。在这里的每一天我的思维都在颠覆，培训让我看到了更多的市场机会，激发了我很多新的想法，迫不及待地想要回去尝试。遗憾的是考试得了个98，如果是满分，我会带着非常荣耀的成绩毕业于功道，我觉得那是一个自豪的事情。</p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+            <h2 class="hm_title1">客户评价</h2>
+            <img src="images/hm_5.jpg" >
+            <p class="hm_te">CASE</p>
+            <div class="hm_lx">
+            <p>王剑</p>
+            <p>迪鑫—超达集团董事长</p>
+            <p>我是第一位来到功道的集团董事长，我觉得来得太值了。在这里的每一天我的思维都在颠覆，培训让我看到了更多的市场机会，激发了我很多新的想法，迫不及待地想要回去尝试。遗憾的是考试得了个98，如果是满分，我会带着非常荣耀的成绩毕业于功道，我觉得那是一个自豪的事情。</p>
+            </div>
+            </div>
+            </div>
+            </div>
+ <script src="js/swiper-4.2.6.min.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+      var mySwiper = new Swiper ('.swiper-container', {
+        direction:'horizontal',
+        loop: 300,
+        autoplay:true,
+        speed:300,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+　　　　autoplayDisableOnInteraction : false,
+        scrollbar: '.swiper-scrollbar',
+      });
+    } 
+</script>
+</body>
+</html>
