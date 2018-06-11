@@ -1,0 +1,20 @@
+/*html5*/
+article,aside,footer,header,section,footer,nav,figure{display:block; margin:0 auto;}
+/*clear*/
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after{clear:both;overflow:hidden;}
+.clearfix{zoom:1;}
+.clear{ clear:both;}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.tc{text-align:center;}
+.tr{
+	text-align:right;
+}
+.w1200{
+	width:1200px;
+	margin:0 auto;
+	position: relative;
+}
